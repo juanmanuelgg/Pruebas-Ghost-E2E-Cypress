@@ -1,0 +1,18 @@
+{
+  "name": "pruebas-e2e-ghost-cypress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "cypress.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@faker-js/faker": "^7.6.0",
+    "mochawesome": "^7.1.3"
+  },
+  "dependencies": {
+    "faker": "^6.6.6"
+  }
+}
