@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2023-05-08T02:09:49.015Z",
-    "end": "2023-05-08T02:10:15.612Z",
-    "duration": 26597,
+    "start": "2023-05-08T02:45:28.558Z",
+    "end": "2023-05-08T02:45:54.754Z",
+    "duration": 26196,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "28e78780-93d4-4bb9-8176-6a93ce209d5d",
+      "uuid": "8b3abaa3-b1cb-4b6f-a2e0-20ef7d451722",
       "title": "",
       "fullFile": "cypress/e2e/funcionalidad5/funcionalidad5.spec.cy.js",
       "file": "cypress/e2e/funcionalidad5/funcionalidad5.spec.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "a20de3ee-3a80-4357-adfc-6c5e6cd747dc",
+          "uuid": "9a748a0a-13a9-473f-ba99-f43bd7bab4bb",
           "title": "Con mi usuario de ghost quiero enviar una invitacion a un email ya existente en las invitaciones",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Hacer click en la funcionalidad para crear tag y llenar formulario",
               "fullTitle": "Con mi usuario de ghost quiero enviar una invitacion a un email ya existente en las invitaciones Hacer click en la funcionalidad para crear tag y llenar formulario",
               "timedOut": null,
-              "duration": 23714,
+              "duration": 23342,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "cy.hacerClickEnFuncionalidad(\"staff\");\ncy.wait(1000);\ncy.get(\"button.gh-btn.gh-btn-green\").should(\"exist\");\ncy.wait(1000);\ncy.get(\"button.gh-btn.gh-btn-green\").click();\ncy.wait(1000);\ncy.get(`input[name=\"email\"],input[name=\"role\"]`).should(\"exist\");\ncy.wait(1000);\nlet existing_email = _faker.faker.internet.email();\ncy.log(existing_email);\ncy.get(`input[name=\"email\"]`).type(_faker.faker.internet.email());\ncy.wait(1000);\ncy.get(\".gh-btn.gh-btn-green.gh-btn-icon.ember-view\").click();\ncy.wait(1000);\ncy.get(\".gh-alert.gh-alert-red.ember-view .gh-alert-content\").should(\"exist\");\ncy.hacerClickEnFuncionalidad(\"staff\");\ncy.wait(1000);\ncy.get(\"button.gh-btn.gh-btn-green\").click();\ncy.get(`input[name=\"email\"]`).first().type(existing_email);\ncy.get(\".gh-btn.gh-btn-green.gh-btn-icon.ember-view\").click();\ncy.wait(3000);\ncy.get(\".gh-alert.gh-alert-red.ember-view .gh-alert-content\").should(\"exist\");",
               "err": {},
-              "uuid": "18d2c3a6-aec3-4f79-b78c-5a2f438d6b9f",
-              "parentUUID": "a20de3ee-3a80-4357-adfc-6c5e6cd747dc",
+              "uuid": "aa732e40-6890-4af5-b290-75e910e9fae5",
+              "parentUUID": "9a748a0a-13a9-473f-ba99-f43bd7bab4bb",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "18d2c3a6-aec3-4f79-b78c-5a2f438d6b9f"
+            "aa732e40-6890-4af5-b290-75e910e9fae5"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 23714,
+          "duration": 23342,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
