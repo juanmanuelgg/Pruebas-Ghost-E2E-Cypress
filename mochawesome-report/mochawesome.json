@@ -1,0 +1,217 @@
+{
+  "stats": {
+    "suites": 4,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-05-08T02:18:17.383Z",
+    "end": "2023-05-08T02:19:37.122Z",
+    "duration": 79739,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "cef30872-e369-4107-bb7e-01c66664e02f",
+      "title": "",
+      "fullFile": "cypress\\e2e\\funcionalidad3\\funcionalidad3.spec.cy.js",
+      "file": "cypress\\e2e\\funcionalidad3\\funcionalidad3.spec.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6d193c50-83aa-43b5-bdc7-f91227bffaa8",
+          "title": "Con mi usuario de ghost quiero enviar una invitacion a un email",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Hacer click en la funcionalidad para crear tag y llenar formulario",
+              "fullTitle": "Con mi usuario de ghost quiero enviar una invitacion a un email Hacer click en la funcionalidad para crear tag y llenar formulario",
+              "timedOut": null,
+              "duration": 17534,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//And I click on the staff function    \ncy.hacerClickEnFuncionalidad(\"staff\");\ncy.wait(1000);\n//Then A save button should exist\ncy.get(\"button.gh-btn.gh-btn-green\").should(\"exist\");\ncy.wait(1000);\n//And I click on add new tag\ncy.get(\"button.gh-btn.gh-btn-green\").click();\ncy.wait(1000);\n//Then A form should esxist\ncy.get(`input[name=\"email\"],input[name=\"role\"]`).should(\"exist\");\ncy.wait(1000);\n//And I enter an email\ncy.get(`input[name=\"email\"]`).type(_faker.faker.internet.email());\ncy.wait(1000);\n//And I save the invitation\ncy.get(\".gh-btn.gh-btn-green.gh-btn-icon.ember-view\").click();\ncy.wait(1000);\n//Then An Error must exist\ncy.get(\".gh-alert.gh-alert-red.ember-view .gh-alert-content\").should(\"exist\");",
+              "err": {},
+              "uuid": "49030a41-92db-4ede-9270-e53d4d0a2c49",
+              "parentUUID": "6d193c50-83aa-43b5-bdc7-f91227bffaa8",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "49030a41-92db-4ede-9270-e53d4d0a2c49"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 17534,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "49e8aee5-5ec1-4744-bf52-8e60dd20268b",
+          "title": "Con mi usuario de ghost quiero enviar una invitacion a un email con email invalido",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Hacer click en la funcionalidad para crear tag y llenar formulario",
+              "fullTitle": "Con mi usuario de ghost quiero enviar una invitacion a un email con email invalido Hacer click en la funcionalidad para crear tag y llenar formulario",
+              "timedOut": null,
+              "duration": 16933,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.hacerClickEnFuncionalidad(\"staff\");\ncy.wait(1000);\ncy.get(\"button.gh-btn.gh-btn-green\").should(\"exist\");\ncy.wait(1000);\ncy.get(\"button.gh-btn.gh-btn-green\").click();\ncy.wait(1000);\ncy.get(`input[name=\"email\"],input[name=\"role\"]`).should(\"exist\");\ncy.wait(1000);\ncy.get(`input[name=\"email\"]`).type(_faker.faker.name.fullName());\ncy.wait(1000);\ncy.get(\".gh-btn.gh-btn-green.gh-btn-icon.ember-view\").click();\ncy.wait(1000);\ncy.get(\".retry_svg__retry-animated\").should(\"exist\");",
+              "err": {},
+              "uuid": "3e875ad1-ce4b-42d9-a9e0-bdf94987bdb3",
+              "parentUUID": "49e8aee5-5ec1-4744-bf52-8e60dd20268b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "3e875ad1-ce4b-42d9-a9e0-bdf94987bdb3"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 16933,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "9ae75877-e1e1-4dfe-b18e-1fcbf6f2e573",
+          "title": "Con mi usuario de ghost quiero enviar una invitacion a un email ya existente en las invitaciones",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Hacer click en la funcionalidad para crear tag y llenar formulario",
+              "fullTitle": "Con mi usuario de ghost quiero enviar una invitacion a un email ya existente en las invitaciones Hacer click en la funcionalidad para crear tag y llenar formulario",
+              "timedOut": null,
+              "duration": 24147,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.hacerClickEnFuncionalidad(\"staff\");\ncy.wait(1000);\ncy.get(\"button.gh-btn.gh-btn-green\").should(\"exist\");\ncy.wait(1000);\ncy.get(\"button.gh-btn.gh-btn-green\").click();\ncy.wait(1000);\ncy.get(`input[name=\"email\"],input[name=\"role\"]`).should(\"exist\");\ncy.wait(1000);\nlet existing_email = _faker.faker.internet.email();\ncy.log(existing_email);\ncy.get(`input[name=\"email\"]`).type(existing_email);\ncy.wait(1000);\ncy.get(\".gh-btn.gh-btn-green.gh-btn-icon.ember-view\").click();\ncy.wait(1000);\ncy.get(\".gh-alert.gh-alert-red.ember-view .gh-alert-content\").should(\"exist\");\ncy.hacerClickEnFuncionalidad(\"staff\");\ncy.wait(1000);\ncy.get(\"button.gh-btn.gh-btn-green\").click();\ncy.get(`input[name=\"email\"]`).first().type(existing_email);\ncy.get(\".gh-btn.gh-btn-green.gh-btn-icon.ember-view\").click();\ncy.wait(3000);\ncy.get(\".gh-alert.gh-alert-red.ember-view .gh-alert-content,p.response\").should(\"exist\");",
+              "err": {},
+              "uuid": "2ca69370-a5e2-4915-ba17-28315011c19a",
+              "parentUUID": "9ae75877-e1e1-4dfe-b18e-1fcbf6f2e573",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "2ca69370-a5e2-4915-ba17-28315011c19a"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 24147,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "108407dd-362d-41bd-a44a-419043305f35",
+          "title": "Con mi usuario de ghost quiero enviar una invitacion a un email con un rol dirente",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Hacer click en la funcionalidad para crear tag y llenar formulario",
+              "fullTitle": "Con mi usuario de ghost quiero enviar una invitacion a un email con un rol dirente Hacer click en la funcionalidad para crear tag y llenar formulario",
+              "timedOut": null,
+              "duration": 18273,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.hacerClickEnFuncionalidad(\"staff\");\ncy.wait(1000);\ncy.get(\"button.gh-btn.gh-btn-green\").should(\"exist\");\ncy.wait(1000);\ncy.get(\"button.gh-btn.gh-btn-green\").click();\ncy.wait(1000);\ncy.get(`input[name=\"email\"],input[name=\"role\"]`).should(\"exist\");\ncy.wait(1000);\ncy.get(\"#new-user-role\").select('6457302b5ab6ff0001fba497');\ncy.wait(1000);\ncy.get(`input[name=\"email\"]`).type(_faker.faker.internet.email());\ncy.wait(1000);\ncy.get(\".gh-btn.gh-btn-green.gh-btn-icon.ember-view\").click();\ncy.wait(1000);\ncy.get(\".gh-alert.gh-alert-red.ember-view .gh-alert-content\").should(\"exist\");",
+              "err": {},
+              "uuid": "bf763f5f-ca86-438a-9c0f-5d0ba2a7ffac",
+              "parentUUID": "108407dd-362d-41bd-a44a-419043305f35",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "bf763f5f-ca86-438a-9c0f-5d0ba2a7ffac"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 18273,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
