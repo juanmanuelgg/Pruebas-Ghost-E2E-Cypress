@@ -7,7 +7,7 @@
     "docker:up": "docker/startup.sh -g '3.41.1' -m '5.7.40' -p '3001'",
     "docker:down": "docker/teardown.sh -g '3.41.1' -m '5.7.40'",
     "test": "cypress run --headless --reporter mochawesome",
-    "cy:open": "cypress open --browser chrome"
+    "start": "cypress open --browser chrome"
   },
   "author": "",
   "license": "ISC",

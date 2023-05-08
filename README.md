@@ -20,7 +20,7 @@ npm run docker:up
 <p>Este comando descargara la imagen de ghost y la ejecutara en el puerto 3001, luego para eliminarlo se puede ejecutar el siguiente comando:</p>
 
 ```bash
-# Es immportante aclarar que este comando eliminara el contenedor, la imagen y todos los datos que se hayan creado en ghost y la base de datos.
+# Es importante aclarar que este comando eliminara el contenedor, la imagen y todos los datos que se hayan creado en ghost y la base de datos.
 npm run docker:down
 ```
 
@@ -38,6 +38,13 @@ npm run docker:down
     <li>En la carpeta de <b>/videos</b>, quedan los videos de cada funcionalidad.</li>    
 </ul> </li>
 </ul>
+
+```bash
+# Ejemplo de ejecución de pruebas (headless)
+npm run test
+# Ejemplo de ejecución de pruebas (con interfaz)
+npm start
+```
 
 <h2>Reporte de pruebas:</h2>
 <p>Para ver el reporte de pruebas, se debe abrir el archivo <b>index.html</b> que se encuentra en la carpeta <b>docs</b>, este archivo se genera automaticamente al ejecutar el comando <b>cypress run --headless --reporter mochawesome</b>. Otra opcion es revisarlo en la siguiente url <a href="https://juanjice29.github.io/Pruebas-Ghost-E2E-Cypress/docs">Reporte de pruebas</a>
