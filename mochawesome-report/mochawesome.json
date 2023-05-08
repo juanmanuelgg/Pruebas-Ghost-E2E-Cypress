@@ -1,15 +1,15 @@
 {
   "stats": {
-    "suites": 1,
-    "tests": 1,
-    "passes": 1,
+    "suites": 3,
+    "tests": 3,
+    "passes": 2,
     "pending": 0,
-    "failures": 0,
-    "start": "2023-05-07T21:39:46.506Z",
-    "end": "2023-05-07T21:39:57.527Z",
-    "duration": 11021,
-    "testsRegistered": 1,
-    "passPercent": 100,
+    "failures": 1,
+    "start": "2023-05-08T02:08:24.957Z",
+    "end": "2023-05-08T02:10:01.618Z",
+    "duration": 96661,
+    "testsRegistered": 3,
+    "passPercent": 66.66666666666666,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "73fb8a42-c7d9-47bd-90a2-114b0a92363e",
+      "uuid": "544de0aa-c6ce-46e7-b50b-9adf290d48d5",
       "title": "",
       "fullFile": "cypress\\e2e\\funcionalidad2\\funcionalidad2.spec.cy.js",
       "file": "cypress\\e2e\\funcionalidad2\\funcionalidad2.spec.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "e8ffbcdd-031d-4952-a1f2-39ab944573a5",
+          "uuid": "186fb6f2-e293-4ce9-aa97-04904f8778fe",
           "title": "Con mi usuario de ghost creo un Tag",
           "fullFile": "",
           "file": "",
@@ -35,32 +35,114 @@
           "afterHooks": [],
           "tests": [
             {
-              "title": "passes",
-              "fullTitle": "Con mi usuario de ghost creo un Tag passes",
+              "title": "Hacer click en la funcionalidad para crear tag y llenar formulario",
+              "fullTitle": "Con mi usuario de ghost creo un Tag Hacer click en la funcionalidad para crear tag y llenar formulario",
               "timedOut": null,
-              "duration": 9442,
+              "duration": 22787,
               "state": "passed",
-              "speed": "medium",
+              "speed": "slow",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "cy.hacerLogin(_credentials.globalVariables.password, \"site\", \"nav.gh-nav.ember-view\");",
+              "code": "cy.hacerClickEnFuncionalidad(\"tags\");\n//Then I should have a new tag button\ncy.get(\"a[href='#/tags/new/']\").should(\"exist\");\n//And I click on the new tag button\ncy.wait(1000);\ncy.get(\"a[href='#/tags/new/']\").click();\ncy.wait(1000);\n//Then I should have form to enter tag information and save button\ncy.get(\"#tag-name,#tag-slug,#tag-description,section .view-actions > button\").should(\"exist\");\ncy.wait(1000);\ncy.get(\"#tag-name\").type(_faker.faker.name.fullName());\ncy.wait(1000);\n//And I enter slug tag\ncurrent_slug = _faker.faker.random.alphaNumeric(10);\ncy.get(\"#tag-slug\").focus();\ncy.wait(1000);\ncy.get(\"#tag-slug\").clear({\n  force: true\n});\ncy.wait(1000);\ncy.get(\"#tag-slug\").type(current_slug, {\n  force: true\n});\ncy.wait(1000);\n//And I enter tag description\ncy.get(\"#tag-description\").type(_faker.faker.lorem.lines(1));\ncy.wait(1000);\n//And I click Save\ncy.get(\"section .view-actions button\").click();\ncy.wait(1000);\n//And I click on the tag function\ncy.hacerClickEnFuncionalidad(\"tags\");\n//Then I should have a new tag with correct slug link\ncy.get(`a[href='#/tags/${current_slug}/']`).should(\"exist\");",
               "err": {},
-              "uuid": "1b4252b2-28b4-47a6-81c2-40b1403e22b6",
-              "parentUUID": "e8ffbcdd-031d-4952-a1f2-39ab944573a5",
+              "uuid": "4b870b30-2b66-4c39-b745-64fd9906203f",
+              "parentUUID": "186fb6f2-e293-4ce9-aa97-04904f8778fe",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "1b4252b2-28b4-47a6-81c2-40b1403e22b6"
+            "4b870b30-2b66-4c39-b745-64fd9906203f"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 9442,
+          "duration": 22787,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "ea3d3e74-bcf2-4c3e-99d5-de826102a265",
+          "title": "Con mi usuario de ghost creo un Tag sin titulo y luego lo corrijo",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Hacer click en la funcionalidad para crear tag y llenar formulario",
+              "fullTitle": "Con mi usuario de ghost creo un Tag sin titulo y luego lo corrijo Hacer click en la funcionalidad para crear tag y llenar formulario",
+              "timedOut": null,
+              "duration": 31172,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.hacerClickEnFuncionalidad(\"tags\");\n//Then I should have a new tag button\ncy.get(\"a[href='#/tags/new/']\").should(\"exist\");\n//And I click on the new tag button\ncy.wait(1000);\ncy.get(\"a[href='#/tags/new/']\").click();\ncy.wait(1000);\n//Then I should have form to enter tag information and save button\ncy.get(\"#tag-name,#tag-slug,#tag-description,section .view-actions > button\").should(\"exist\");\ncy.wait(1000);\ncy.get(\"#tag-name\").focus().clear({\n  force: true\n});\ncy.wait(1000);\n//And I enter slug tag\ncurrent_slug = _faker.faker.random.alphaNumeric(10);\ncy.get(\"#tag-slug\").focus();\ncy.wait(1000);\ncy.get(\"#tag-slug\").clear({\n  force: true\n});\ncy.wait(1000);\ncy.get(\"#tag-slug\").type(current_slug, {\n  force: true\n});\ncy.wait(1000);\n//And I enter tag description\ncy.get(\"#tag-description\").type(_faker.faker.lorem.lines(1));\ncy.wait(1000);\n//And I click Save\ncy.get(\"section .view-actions button\").click();\ncy.wait(1000);\n//Then It should have an error to retry  \ncy.get(\"svg.retry_svg__retry-animated\").should(\"exist\");\ncy.wait(1000);\n//And I retry tag name\ncy.get(\"#tag-name\").type(_faker.faker.name.fullName());\ncy.wait(1000);\n//And I save again\ncy.get(\"section .view-actions button\").click();\ncy.wait(1000);\n//And I click on the tag function\ncy.hacerClickEnFuncionalidad(\"tags\");\n//And I click on the leave button\ncy.get(\".modal-footer .gh-btn.gh-btn-red\").first().click();\ncy.wait(1000);\n//Then I should have a new tag with correct slug link\ncy.get(`a[href='#/tags/${current_slug}/']`).should(\"exist\");",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `a[href='#/tags/zct3j85tim/']`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `a[href='#/tags/zct3j85tim/']`, but never found it.\n    at Context.eval (webpack:///./cypress/e2e/funcionalidad2/funcionalidad2.spec.cy.js:99:56)",
+                "diff": null
+              },
+              "uuid": "2ff03ce9-e05f-41e9-b7da-61ea78154a94",
+              "parentUUID": "ea3d3e74-bcf2-4c3e-99d5-de826102a265",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "2ff03ce9-e05f-41e9-b7da-61ea78154a94"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 31172,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "1b1164aa-a928-4f4f-9ce1-ab88f86c2c51",
+          "title": "Con mi usuario de ghost creo un Tag con un nombre que ya exista",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Hacer click en la funcionalidad para crear tag y llenar formulario",
+              "fullTitle": "Con mi usuario de ghost creo un Tag con un nombre que ya exista Hacer click en la funcionalidad para crear tag y llenar formulario",
+              "timedOut": null,
+              "duration": 39915,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.hacerClickEnFuncionalidad(\"tags\");\n//Then I should have a new tag button\ncy.get(\"a[href='#/tags/new/']\").should(\"exist\");\n//And I click on the new tag button\ncy.wait(1000);\ncy.get(\"a[href='#/tags/new/']\").click();\ncy.wait(1000);\n//Then I should have form to enter tag information and save button\ncy.get(\"#tag-name,#tag-slug,#tag-description,section .view-actions > button\").should(\"exist\");\ncy.wait(1000);\ncy.get(\"#tag-name\").focus().clear({\n  force: true\n});\ncy.wait(1000);\nlet current_name = _faker.faker.name.fullName();\ncy.get(\"#tag-name\").type(current_name, {\n  force: true\n});\ncy.wait(1000);\n//And I enter slug tag\ncurrent_slug = _faker.faker.random.alphaNumeric(10);\ncy.get(\"#tag-slug\").focus();\ncy.wait(1000);\ncy.get(\"#tag-slug\").clear({\n  force: true\n});\ncy.wait(1000);\ncy.get(\"#tag-slug\").type(current_slug, {\n  force: true\n});\ncy.wait(1000);\n//And I enter tag description\ncy.get(\"#tag-description\").type(_faker.faker.lorem.lines(1));\ncy.wait(1000);\n//And I click Save\ncy.get(\"section .view-actions button\").click();\ncy.wait(1000);\ncy.hacerClickEnFuncionalidad(\"tags\");\ncy.wait(1000);\n//Then I should have a new tag with correct slug link\ncy.get(`a[href='#/tags/${current_slug}/']`).should(\"exist\");\ncy.wait(1000);\ncy.get(\"a[href='#/tags/new/']\").click();\ncy.wait(1000);\n//Then I should have a new tag with correct slug link\ncy.get(\"#tag-name,#tag-slug,#tag-description,section .view-actions > button\").should(\"exist\");\ncy.wait(1000);\ncy.get(\"#tag-name\").focus().clear({\n  force: true\n});\ncy.wait(1000);\ncy.get(\"#tag-name\").type(current_name, {\n  force: true\n});\ncy.wait(1000);\n//And I enter slug tag\ncurrent_slug2 = _faker.faker.random.alphaNumeric(10);\ncy.get(\"#tag-slug\").focus();\ncy.wait(1000);\ncy.get(\"#tag-slug\").clear({\n  force: true\n});\ncy.wait(1000);\ncy.get(\"#tag-slug\").type(current_slug2, {\n  force: true\n});\ncy.wait(1000);\n//And I enter tag description\ncy.get(\"#tag-description\").type(_faker.faker.lorem.lines(1));\ncy.wait(1000);\n//And I click Save\ncy.get(\"section .view-actions button\").click();\ncy.wait(1000);\ncy.hacerClickEnFuncionalidad(\"tags\");\ncy.wait(1000);\n//Then I should have a new tag with correct slug link\ncy.get(`a[href='#/tags/${current_slug2}/']`).should(\"exist\");\ncy.wait(1000);",
+              "err": {},
+              "uuid": "b751e861-5b96-45b7-b842-42fd37214119",
+              "parentUUID": "1b1164aa-a928-4f4f-9ce1-ab88f86c2c51",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "b751e861-5b96-45b7-b842-42fd37214119"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 39915,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

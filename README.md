@@ -13,6 +13,6 @@
 <li>Ejecutar <b>npm install</b>, esto instalara dos librerias necesarias para correr los escenarios ,que son faker y mochawesome.</li>
 <li>Se deben cambiar las variables globales para que funcionen correctamente las pruebas, en la ruta <b>/cypress/environment/credentials.js</b> existen 3 variables, <b>email : </b> remplazela por el email que tiene registrado localmente en ghost,<b>password : </b> remplazela por la contraseña de su cuenta local en ghost y finalmente 
 <b>baseUrl : </b> es necesario remplazar el puerto por el cual esta escuchando la aplicacion.</li>
-<li>Aqui hay dos opciones abrir cypress y ejecutar cada funcionalidad una a una con <b>cypress open</b>, para gener un reporte y correr todas las funcionalidad se debe ejecutar <b>cypress run --headless --reporte mochawesome </b></li>
+<li>Aqui hay dos opciones abrir cypress y ejecutar cada funcionalidad una a una con <b>cypress open</b>, para gener un reporte y correr todas las funcionalidad se debe ejecutar <b>cypress run --headless --reporter mochawesome </b></li>
 </ul>
 
