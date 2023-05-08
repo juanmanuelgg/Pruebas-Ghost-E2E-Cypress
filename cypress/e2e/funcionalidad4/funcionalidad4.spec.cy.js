@@ -1,12 +1,12 @@
 import { globalVariables } from "../../environment/credentials";
 import { faker } from "@faker-js/faker";
 
-describe("Con mi usuario de ghost quiero enviar una invitacion a un email ya existente en las invitaciones", () => {
+describe("Con mi usuario de ghost quiero administrar los post de la plataforma", () => {
   //And I click on the tag function
   beforeEach("Hacer Login", () => {
     cy.hacerLogin(globalVariables.password, "site", "nav.gh-nav.ember-view");
   });
-  it("Hacer click en la funcionalidad para crear tag y llenar formulario", () => {
+  it("Crear un nuevo post, editarlo y revisarlo", () => {
     // Crear un post
     cy.hacerClickEnFuncionalidad("posts");
     cy.get(".gh-secondary-action.gh-nav-new-post.ember-view")
@@ -52,21 +52,10 @@ describe("Con mi usuario de ghost quiero enviar una invitacion a un email ya exi
 
     // Publicar el post
     //cy.wait(1000);
-    //cy,get("span").contains("Publish").should("exist").click();
+    //cy,get("div > div > span").contains("Publish").should("exist").click();
     //cy.get("gh-btn.gh-btn-blue.gh-publishmenu-button.gh-btn-icon.ember-view").should("exist").click();
 
-    //cy.get(".gh-alert.gh-alert-red.ember-view .gh-alert-content").should(
-    //  "exist"
-    //);
-    //cy.hacerClickEnFuncionalidad("staff");
-    //cy.wait(1000);
-    //cy.get("button.gh-btn.gh-btn-green").click();
-    //cy.get(`input[name="email"]`).first().type(existing_email);
-    //
-    //cy.get(".gh-btn.gh-btn-green.gh-btn-icon.ember-view").click();
-    //cy.wait(3000);
-    //cy.get(".gh-alert.gh-alert-red.ember-view .gh-alert-content").should(
-    //  "exist"
-    //);
+    // Eliminar el post
+
   });
 });

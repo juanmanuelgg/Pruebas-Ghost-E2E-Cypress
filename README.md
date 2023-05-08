@@ -48,6 +48,12 @@ npm start
 
 <h2>Reporte de pruebas:</h2>
 <p>Para ver el reporte de pruebas, se debe abrir el archivo <b>index.html</b> que se encuentra en la carpeta <b>docs</b>, este archivo se genera automaticamente al ejecutar el comando <b>cypress run --headless --reporter mochawesome</b>. Otra opcion es revisarlo en la siguiente url <a href="https://juanjice29.github.io/Pruebas-Ghost-E2E-Cypress/docs">Reporte de pruebas</a>
+<ul>
+<li>Funcionalidad 1 <b>/docs/Reporte-funcionalidad-1.html</b>, <a href="https://juanjice29.github.io/Pruebas-Ghost-E2E-Cypress/docs/Reporte-funcionalidad-1.html">Reporte de la funcionalidad 1</a></li>
+<li>Funcionalidad 2 <b>/docs/Reporte-funcionalidad-2.html</b>, <a href="https://juanjice29.github.io/Pruebas-Ghost-E2E-Cypress/docs/Reporte-funcionalidad-1.html">Reporte de la funcionalidad 2</a></li>
+<li>Funcionalidad 3 <b>/docs/Reporte-funcionalidad-3.html</b>, <a href="https://juanjice29.github.io/Pruebas-Ghost-E2E-Cypress/docs/Reporte-funcionalidad-1.html">Reporte de la funcionalidad 3</a></li>
+<li>Funcionalidad 4 <b>/docs/Reporte-funcionalidad-4.html</b>, <a href="https://juanjice29.github.io/Pruebas-Ghost-E2E-Cypress/docs/Reporte-funcionalidad-1.html">Reporte de la funcionalidad 4</a></li>
+</ul>
 </p>
 
 <h2>Integrantes:</h2>
