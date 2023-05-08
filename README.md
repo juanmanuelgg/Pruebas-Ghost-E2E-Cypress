@@ -52,8 +52,8 @@ npm start
 
 <h2>Integrantes:</h2>
 <ul>
-<li>Juan José Jiménez Celis</li>
-<li>Andrés Lombo Caicedo</li>
-<li>Luz Stella Ochoa Marin</li>
-<li>Juan Manuel González Garzón</li>
+<li>Juan Manuel Jiménez Celis (jm.jimenezc12@uniandes.edu.co)</li>
+<li>Andrés Lombo Caicedo (a.lombo@uniandes.edu.co)</li>
+<li>Luz Stella Ochoa Marin (ls.ochoa@uniandes.edu.co)</li>
+<li>Juan Manuel González Garzón (jm.gonzalez1844@uniandes.edu.co)</li>
 </ul>
