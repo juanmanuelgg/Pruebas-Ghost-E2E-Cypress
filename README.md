@@ -1,5 +1,6 @@
 <h1>Pruebas-Ghost-E2E-Cypress</h1>
 <p>En este repositorio están los 20 escenarios y pruebas creadas con la herramienta cypress para la aplicación bajo pruebas ghost.</p>
+
 <h2>Requisitos:</h2>
 <ul>
 <li>Cypress</li>
@@ -7,6 +8,25 @@
 <li>Ghost 3.41.1</li>
 <li>Tener un usuario registrado en el aplicativo ghost</li>
 </ul>
+
+<h2>Montar Ghost localmente (OPCIONAL):</h2>
+<p>Para montar ghost localmente, se debe tener instalado node, npm, docker y git, luego se debe ejecutar los siguientes comandos:</p>
+
+```bash
+# Esta instrucción corre ghost 3.41.1 en el puerto 3001 y MySQL 5.7.40
+npm run docker:up
+```
+<p>Este comando descargara la imagen de ghost y la ejecutara en el puerto 3001, luego para eliminarlo se puede ejecutar el siguiente comando:</p>
+
+```bash
+# Es immportante aclarar que este comando eliminara el contenedor, la imagen y todos los datos que se hayan creado en ghost y la base de datos.
+npm run docker:down
+```
+
+<p>Para completar la configuración de ghost, se debe ingresar a la url <a href="http://localhost:3001/ghost">http://localhost:3001/ghost</a>, y crear el usuario administrador. Si desea evitar mas configuraciones sera importante que el email sea: jimenezcelisj2@gmail.com y la password sea: 12345678910</p>
+
+```bash
+
 <h2>Pasos para correr los escenarios de pruebas:</h2>
 <ul>
 <li>Clonar el repositorio en su equipo local, git clone https://github.com/juanjice29/Pruebas-Ghost-E2E-Cypress.git</li>
@@ -19,3 +39,7 @@
     <li>En la carpeta de <b>/videos</b>, quedan los videos de cada funcionalidad.</li>    
 </ul> </li>
 </ul>
+
+<h2>Reporte de pruebas:</h2>
+<p>Para ver el reporte de pruebas, se debe abrir el archivo <b>index.html</b> que se encuentra en la carpeta <b>docs</b>, este archivo se genera automaticamente al ejecutar el comando <b>cypress run --headless --reporter mochawesome</b>. Otra opcion es revisarlo en la siguiente url <a href="https://juanjice29.github.io/Pruebas-Ghost-E2E-Cypress/docs">Reporte de pruebas</a>
+</p>
