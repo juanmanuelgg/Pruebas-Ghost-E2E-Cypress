@@ -15,4 +15,3 @@
 <b>baseUrl : </b> es necesario remplazar el puerto por el cual esta escuchando la aplicacion.</li>
 <li>Aqui hay dos opciones abrir cypress y ejecutar cada funcionalidad una a una con <b>cypress open</b>, para gener un reporte y correr todas las funcionalidad se debe ejecutar <b>cypress run --headless --reporte mochawesome </b></li>
 </ul>
-
