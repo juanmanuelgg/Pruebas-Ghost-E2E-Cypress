@@ -48,7 +48,10 @@ describe("Con mi usuario de ghost quiero administrar los post de la plataforma",
       .should("exist")
       .click();
 
-    cy.get(".gh-content-entry-title").contains(titulo+" editado").should("exist").click();
+    cy.get(".gh-content-entry-title")
+      .contains(titulo + " editado")
+      .should("exist")
+      .click();
 
     // Publicar el post
     //cy.wait(1000);
@@ -56,6 +59,5 @@ describe("Con mi usuario de ghost quiero administrar los post de la plataforma",
     //cy.get("gh-btn.gh-btn-blue.gh-publishmenu-button.gh-btn-icon.ember-view").should("exist").click();
 
     // Eliminar el post
-
   });
 });

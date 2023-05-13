@@ -1,27 +1,16 @@
-# Tomado de: https://hub.docker.com/_/ghost/
+# Inpirado en: https://hub.docker.com/_/ghost/
 # Sección: Production mode ... via docker stack deploy or docker-compose
 version: "3.1"
 
 services:
   ghost:
+    container_name: ghost${GHOST_VERSION:-latest}
     image: ghost:${GHOST_VERSION:-latest}
     restart: always
     ports:
       - ${GHOST_PORT:-8080}:2368
     environment:
-      # see https://ghost.org/docs/config/#configuration-options
-      database__client: mysql
-      database__connection__host: db
-      database__connection__user: root
-      database__connection__password: unapasswordbiensegura
-      database__connection__database: ghost
       # this url value is just an example, and is likely wrong for your environment!
       url: http://localhost:${GHOST_PORT:-8080}
       # contrary to the default mentioned in the linked documentation, this image defaults to NODE_ENV=production (so development mode needs to be explicitly specified if desired)
       #NODE_ENV: development
-
-  db:
-    image: mysql:${MYSQL_VERSION:-latest}
-    restart: always
-    environment:
-      MYSQL_ROOT_PASSWORD: unapasswordbiensegura

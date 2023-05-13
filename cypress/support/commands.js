@@ -23,35 +23,33 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
-import {globalVariables} from "../environment/credentials"
+import { globalVariables } from "../environment/credentials";
 
-Cypress.Commands.add('hacerClickEnFuncionalidad',(url_link)=>{
-    cy.get(`a[href="#/${url_link}/"]`).first().click()
-    cy.wait(1000);
-})
+Cypress.Commands.add("hacerClickEnFuncionalidad", (url_link) => {
+  cy.get(`a[href="#/${url_link}/"]`).first().click();
+  cy.wait(1000);
+});
 
-Cypress.Commands.add('hacerLogin',
- (password,expectedUrl,expectedElem) => {
-    //Given the url
-    cy.visit(globalVariables.baseUrl)
-    //And I wait for 2 seconds 
-    cy.wait(2000)
-    //And I enter login email    
-    cy.get('#ember8').type(globalVariables.email)
-    //And I wait for 1 seconds
-    cy.wait(1000);
-    //And I enter the password
-    cy.get('#ember10').type(password);
-    //And I wait for 1 seconds
-    cy.wait(1000);
-    //And I click on submit button
-    cy.get("#ember12").click();
-    //And I wait for 2 seconds
-    cy.wait(2000);
-    //Then url should end in #/site
-    cy.url().should('equal',globalVariables.baseUrl+"#/"+expectedUrl)
-    //Then navbar should exist
-    cy.get(expectedElem).should("exist")
-    cy.wait(2000);
-  
-})
+Cypress.Commands.add("hacerLogin", (password, expectedUrl, expectedElem) => {
+  //Given the url
+  cy.visit(globalVariables.baseUrl);
+  //And I wait for 2 seconds
+  cy.wait(2000);
+  //And I enter login email
+  cy.get("#ember8").type(globalVariables.email);
+  //And I wait for 1 seconds
+  cy.wait(1000);
+  //And I enter the password
+  cy.get("#ember10").type(password);
+  //And I wait for 1 seconds
+  cy.wait(1000);
+  //And I click on submit button
+  cy.get("#ember12").click();
+  //And I wait for 2 seconds
+  cy.wait(2000);
+  //Then url should end in #/site
+  cy.url().should("equal", globalVariables.baseUrl + "#/" + expectedUrl);
+  //Then navbar should exist
+  cy.get(expectedElem).should("exist");
+  cy.wait(2000);
+});
