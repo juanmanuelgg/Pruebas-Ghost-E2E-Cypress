@@ -4,10 +4,10 @@
   "description": "",
   "main": "cypress.config.js",
   "scripts": {
-    "docker1:up": "docker/startup.sh -g '3.41.1' -p '3001'",
-    "docker1:down": "docker/teardown.sh -g '3.41.1'",
-    "docker2:up": "docker/startup.sh -g '4.44.0' -p '3002'",
-    "docker2:down": "docker/teardown.sh -g '4.44.0'",
+    "docker1:up": "bash docker/startup.sh -g '3.41.1' -p '3001'",
+    "docker1:down": "bash docker/teardown.sh -g '3.41.1'",
+    "docker2:up": "bash docker/startup.sh -g '4.44.0' -p '3002'",
+    "docker2:down": "bash docker/teardown.sh -g '4.44.0'",
     "test": "cypress run --headless --reporter mochawesome",
     "start": "cypress open --browser chrome"
   },

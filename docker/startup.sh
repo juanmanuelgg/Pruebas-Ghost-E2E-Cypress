@@ -1,7 +1,7 @@
 #!/bin/bash -x
 
 USAGE="Modo de uso: $0 [-g 'x.y.z' -p '****' ] [-h]      \n
-	-u Ghost version                                                \n
+	-g Ghost version                                                \n
 	-p Ghost port                                                   \n
     -h Mostrar esta ayuda                                           \n
 "
