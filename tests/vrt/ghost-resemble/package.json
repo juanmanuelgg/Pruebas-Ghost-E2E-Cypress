@@ -1,0 +1,14 @@
+{
+    "name": "ghost-resemble",
+    "version": "1.0.0",
+    "description": "pruebas de regresion visual",
+    "main": "index.js",
+    "scripts": {
+        "test": "node index.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "resemblejs": "^4.1.0"
+    }
+}

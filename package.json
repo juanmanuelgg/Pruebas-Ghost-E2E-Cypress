@@ -1,25 +1,22 @@
 {
-  "name": "pruebas-e2e-ghost-cypress",
-  "version": "1.0.0",
-  "description": "",
-  "main": "cypress.config.js",
-  "scripts": {
-    "docker1:up": "bash docker/startup.sh -g '3.41.1' -p '3001'",
-    "docker1:down": "bash docker/teardown.sh -g '3.41.1'",
-    "docker2:up": "bash docker/startup.sh -g '4.44.0' -p '3002'",
-    "docker2:down": "bash docker/teardown.sh -g '4.44.0'",
-    "test": "cypress run --headless --reporter mochawesome",
-    "start": "cypress open --browser chrome"
-  },
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "@cypress/chrome-recorder": "^2.3.1",
-    "@faker-js/faker": "^7.6.0",
-    "cypress": "^12.11.0",
-    "mochawesome": "^7.1.3"
-  },
-  "dependencies": {
-    "faker": "^5.5.3"
-  }
+    "name": "pruebas-ghost-cypress",
+    "version": "1.0.0",
+    "description": "Pruebas automatizadas a la plataforma GHOST",
+    "workspaces": [
+        "tests/e2e/ghost-cypress",
+        "tests/vrt/ghost-resemble"
+    ],
+    "scripts": {
+        "format": "npm run format --workspace=**/* --if-present",
+        "docker:up": "bash docker/startup.sh",
+        "docker:down": "bash docker/teardown.sh",
+        "test:e2e:cypress": "npm test --workspace=tests/e2e/ghost-cypress --",
+        "retrieve:screenshots": "./retrieve-screenshots.sh",
+        "test:vrt": "npm test --workspace=Resemble"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "prettier": "^2.8.8"
+    }
 }
