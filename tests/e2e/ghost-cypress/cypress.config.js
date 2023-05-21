@@ -4,7 +4,8 @@ module.exports = defineConfig({
     reporter: 'mochawesome',
     reporterOptions: {
         reportDir: '../../../docs',
-        reportFilename: 'report'
+        reportFilename: '[name]-report',
+        json: false
     },
     e2e: {
         setupNodeEvents(on, config) {

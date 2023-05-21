@@ -3,8 +3,8 @@
     "version": "1.0.0",
     "description": "Pruebas E2E a la plataforma GHOST con el framework Cypress.",
     "scripts": {
-        "cypress:open": "cypress open --e2e --browser chrome --reporter mochawesome",
-        "cypress:run": "cypress run --e2e --browser chrome --headless --reporter mochawesome",
+        "cypress:open": "cypress open --e2e --browser chrome --reporter ../../../node_modules/mochawesome",
+        "cypress:run": "cypress run --e2e --browser chrome --headless --reporter ../../../node_modules/mochawesome",
         "test": "npm run cypress:run --",
         "format": "prettier --write cypress"
     },
@@ -16,13 +16,11 @@
     ],
     "author": "Juan Manuel González Garzón",
     "license": "MIT",
-    "devDependencies": {
+    "dependencies": {
         "@cypress/chrome-recorder": "^2.3.1",
         "@faker-js/faker": "^7.6.0",
         "cypress": "^12.12.0",
+        "faker": "^5.5.3",
         "mochawesome": "^7.1.3"
-    },
-    "dependencies": {
-        "faker": "^5.5.3"
     }
 }
