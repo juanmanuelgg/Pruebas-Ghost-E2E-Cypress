@@ -10,9 +10,9 @@
         "format": "npm run format --workspace=**/* --if-present",
         "docker:up": "bash docker/startup.sh",
         "docker:down": "bash docker/teardown.sh",
-        "test:e2e:cypress": "npm test --workspace=tests/e2e/ghost-cypress --",
+        "test:e2e:cypress": "npm test --workspace=ghost-cypress --",
         "retrieve:screenshots": "./retrieve-screenshots.sh",
-        "test:vrt": "npm test --workspace=Resemble"
+        "test:vrt": "npm test --workspace=ghost-resemble"
     },
     "author": "",
     "license": "ISC",

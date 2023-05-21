@@ -143,9 +143,11 @@ async function main() {
 
     const datetime = new Date().toISOString().replace(/:/g, '');
     const report = createReport(datetime, respuesta);
-    fs.writeFileSync(`../docs/index.html`, report);
-    fs.copyFileSync('./index.css', `../docs/index.css`);
-    fs.cpSync('./screenshots', `../docs/screenshots`, { recursive: true });
+    fs.writeFileSync('../../../docs/index.html', report);
+    fs.copyFileSync('./index.css', '../../../docs/index.css');
+    fs.cpSync('./screenshots', '../../../docs/screenshots', {
+        recursive: true
+    });
 
     console.log(
         '-------------------------------------------------------------'
