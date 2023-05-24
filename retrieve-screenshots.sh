@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -x
 
 USAGE="Modo de uso: $0 [-g 'x.y.z' ] [-h]      \n
 	-g Ghost version                           \n
@@ -27,7 +27,7 @@ function processInvocation () {
 }
 
 function main () {
-    find tests -type f -name *.png | grep "${GHOST_VERSION}" | node ./utils/move-file-instruction-creator.mjs | sh
+    find tests/e2e -type f -name *.png | grep "${GHOST_VERSION}" | node ./utils/move-file-instruction-creator.mjs | sh
 }
 
 processInvocation $@
